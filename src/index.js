@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import app from "./app";
 
 dotenv.config();
-
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.DATABASE)
