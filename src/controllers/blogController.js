@@ -33,7 +33,7 @@ export const createPost = async (req, res) => {
       },
     });
   } catch (error) {
-    return res.status(404).json({
+    return res.status(400).json({
       status: "failed",
       error: error.message,
     });
@@ -123,9 +123,8 @@ export const createComment = async (req, res) => {
       });
     }
     const comment = new commentModel({
-      name: req.body.name,
-      user: req.user.email,
-      email: req.body.email,
+      name: req.user.name,
+      email: req.user.email,
       comment: req.body.comment,
     });
     post.comments.push(comment);

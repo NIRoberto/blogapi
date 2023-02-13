@@ -6,9 +6,6 @@ const commentSchema = new mongoose.Schema({
     type: String,
     required: [true, "Name field is required"],
   },
-  user: {
-    type: String,
-  },
   email: {
     type: String,
     required: [true, "Title field is required"],
