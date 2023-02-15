@@ -14,6 +14,7 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: [true, "Description field is required"],
   },
+  createdAt: { type: Date, default: Date.now },
   comments: {
     type: Array,
   },

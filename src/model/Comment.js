@@ -8,7 +8,7 @@ const commentSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: [true, "Title field is required"],
+    required: [true, "Email field is required"],
     validator: [validator.isEmail, "Please provide a valid email"],
   },
   comment: {
